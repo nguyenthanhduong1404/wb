@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin Brand</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+
+        <!--===============================================================================================-->
+        <link rel="icon" type="image/png" href="images/icons/favicon.png" />
+        <!--===============================================================================================-->
+
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+        />
+
+        <!-- Favicon icon -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="images/favicon.png"
+        />
+        <!-- Custom Stylesheet -->
+        <link href="css/style.css" rel="stylesheet" />
+        <style>
+            .btn-action {
+                display: inline-block;
+                min-width: 77px;
+                border: none;
+                padding: 8px 16px;
+                color: #fff !important;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.2s linear;
+                
+            }
+            .btn-action:focus {
+                outline: none
+            }
+            .btn-action:hover {
+                opacity: 0.9;
+            }
+            .btn-action--update {
+                background-color: #7571f9;
+                margin-right: 10px;
+            }
+            .btn-action--add {
+                background-color: #7571f9;
+                margin-right: 10px;
+                padding: 10px 12px
+            }
+            .btn-action--delete {
+                background-color: #f97191;
+            }
+            .search-product-btn{
+                width: 25px;
+                height: 25px;
+            }
+         </style>
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index.html">
+                    <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
+                    <span class="logo-compact"><img src="./images/logo-compact.png" alt=""></span>
+                    <span class="brand-title">
+                        <img src="images/logo-text.png" alt="">
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content clearfix">
+
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="toggle-icon"><i class="icon-menu"></i></span>
+                    </div>
+                </div>
+            
+                <div class="header-right">
+                    <ul class="clearfix">
+                      
+                        <li class="icons dropdown d-none d-md-flex">
+                            <a href="javascript:void(0)" class="log-user" data-toggle="dropdown">
+                                <span class="user-name">homaique</span> <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
+                            </a>
+                          
+                        </li>
+                        <li class="icons dropdown">
+                            <div class="user-img c-pointer position-relative" data-toggle="dropdown">
+                                <span class="activity active"></span>
+                                <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+
+                            </div>
+                            <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li><a href="index.html" class="log-out"> Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="nk-sidebar">
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <!-- <li>
+                <a  href="javascript:void()" aria-expanded="false">
+                     <span class="nav-text">Menu</span>
+                </a>
+              
+            </li> -->
+                    <li>
+                        <a href="statistical.html" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i>
+                            <span class="nav-text">Thống kê</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin.html" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i>
+                            <span class="nav-text">Biểu đồ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-customer.html" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i>
+                            <span class="nav-text">Quản lý tài khoản</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-bill.html" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i>
+                            <span class="nav-text">Quản lý đơn hàng</span>
+                        </a>
+                    </li>
+                      
+                      <li>
+                        <a href="adminProduct.html" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i>
+                            <span class="nav-text">Quản lý sản phẩm</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="admin-brand.html" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i>
+                            <span class="nav-text">Quản lý thương hiệu</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+           
+            <!-- row -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title d-flex justify-content-between">
+                                    <h4>Quản lý thương hiệu</h4>
+                                    <button data-toggle="modal" data-target="#exampleModal" class=" btn-action btn-action--add ">Thêm thương hiệu</button>
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLabel">Thương hiệu</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                    <div class="form-group row">
+                                                        <label
+                                                            class="col-lg-4 col-form-label"
+                                                            for="val-title"
+                                                            >Tên thương hiệu
+                                                        </label>
+                                                        <div class="col-lg-6">
+                                                            <input
+                                                                type="text"
+                                                                class="form-control name-input"
+                                                                id="val-title"
+                                                                name="val-title"
+                                                                placeholder="Nhập tên thương hiệu.."
+                                                            />
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                                              <button type="button" class="btn btn-primary btn-add-brand">Thêm</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="table-responsive" style="text-align: center;">
+                                    <table class="table header-border">
+                                        <thead>
+                                            <tr>
+                                                <th>Id </th>
+                                                <th>Tên thương hiệu</th>
+                                                <th>Quản lý</th>
+                                              
+                                            </tr>
+                                        </thead>
+                                        <tbody class="brand-list">
+                                            <tr>
+                                                <td><a href="javascript:void(0)">Order #26589</a>
+                                                </td>
+                                                <td>Herman Beck</td>
+                                            
+
+                                                <td><button type="button" class="btn btn-danger">Chờ xác nhận</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javascript:void(0)">Order #58746</a>
+                                                </td>
+                                                <td>Mary Adams</td>
+                                                <td><span class="text-muted">Oct 12, 2017</span>
+                                                </td>
+
+                                                <td>CN</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javascript:void(0)">Order #98458</a>
+                                                </td>
+                                                <td>Caleb Richards</td>
+                                                <td><span class="text-muted">May 18, 2017</span>
+                                                </td>
+
+                                                <td>AU</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="javascript:void(0)">Order #32658</a>
+                                                </td>
+                                                <td>June Lane</td>
+                                                <td><span class="text-muted">Apr 28, 2017</span>
+                                                </td>
+                                                <td>FR</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="exampleModalUpdate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Thương hiệu</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group row">
+                                    <label
+                                        class="col-lg-4 col-form-label"
+                                        for="val-title"
+                                        >ID
+                                    </label>
+                                    <div class="col-lg-6">
+                                        <input
+                                            type="text"
+                                            class="form-control name-input id-update-input"
+                                            id="val-title"
+                                            name="val-title"
+                                            placeholder="Enter a title.."
+                                            value="1"
+                                            disabled
+                                        />
+                                    </div>
+                                </div>
+                                    <div class="form-group row">
+                                        <label
+                                            class="col-lg-4 col-form-label"
+                                            for="val-title"
+                                            >Tên thương hiệu
+                                        </label>
+                                        <div class="col-lg-6">
+                                            <input
+                                                type="text"
+                                                class="form-control name-input name-update-input"
+                                                id="val-title"
+                                                name="val-title"
+                                                placeholder="Nhập tên thương hiệu.."
+                                            />
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                              <button type="button" class="btn btn-primary btn-update-brand">Cập nhật</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+
+    <script type="module" src="./js/admin-brand.js"></script>
+    <script type="module" src="./common/handleRenderUsername.js"></script>
+
+
+</body>
+
+</html>

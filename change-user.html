@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0"
+        />
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/login.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        .radio-sex{
+            margin-left: -200px;
+            margin-top: 10px;
+        }
+    </style>
+    <body>
+        <div style="position: relative;top: -270px; left: -60px; display: block;background-color: #ecf0f3 !important ">
+            <a href="index.html"  >
+                <img src="https://toppng.com/uploads/preview/home-icon-home-house-icon-house-icon-free-11553508857ouiuhg9nsa.png" style="height: 50px; width: 50px; z-index: 10000 !important;background-color: #a0a5a8 !important ;color: black !important; 
+                display: block;"></i> </a>
+            
+        </div>
+        <div class="main">
+            
+            <div class="container a-container" id="a-container">
+                <form class="form" id="a-form" method="" action="">
+                    <h2 class="form_title title">Thông tin tài khoản</h2>
+                    
+                    <!-- <span class="form__span"
+                        >or use email for registration</span
+                    > -->
+                    <input
+                        class="form__input sing-up-name"
+                        type="text"
+                        placeholder="Họ tên "/>
+                    <i class="err-name d-none" style="color:red ; margin-left: -55px ">Họ tên sai định dạng chỉ được sử dụng chữ cái</i>
+                    
+
+
+                    
+                    
+                    <input
+                        class="form__input sing-up-email"
+                        type="email"
+                        placeholder="Email"
+                    />
+                    <i  class="err-email d-none" style="color:red ; margin-left: -220px ">Email sai định dạng</i>
+
+
+
+                    
+
+                    <input
+                        class="form__input sing-up-address"
+                        type="text"
+                        placeholder="Địa chỉ"
+                    />
+                    <i  class="err-address d-none" style="color:red ; margin-left: -158px ">Địa chỉ không được để trống</i>
+
+                    <input
+                        class="form__input sing-up-phone"
+                        type="text"
+                        placeholder="Số điện thoại"
+                    />
+                    <i  class="err-phone d-none" style="color:red ; margin-left: -170px ">Số điện thoại sai định dạng</i>
+
+                    <div class="radio-sex">
+                         <span class="form__span"
+                        >Giới tính : </span
+                    >
+                        <input class="sing-up-sex" type="radio" id="nam" name="sex" value="0" checked="checked">
+                        <label for="nam">Nam</label>
+                        <input class="sing-up-sex" type="radio" id="nu" name="sex" value="1">
+                        <label for="nu">Nữ</label>
+                    </div>
+                    <button class="form__button button submit change">Sửa thông tin</button>
+                </form>
+            </div>
+            <div class="container b-container" id="b-container">
+                <form class="form" id="b-form" method="" action="">
+                    <h2 class="form_title title">Đổi mật khẩu</h2>
+                    
+                    <input
+                        class="form__input old-password"
+                        type="password"
+                        placeholder="Mật khẩu cũ"
+                    />
+                    <i  class="err-old-password d-none" style="color:red ; margin-left: -148px ">Password không được để trống</i>
+
+                    <input
+                        class="form__input new-password"
+                        type="password"
+                        placeholder="Mật khẩu mới"
+                    />
+                    <i  class="err-new-password d-none" style="color:red ; margin-left: -148px ">Password không được để trống</i>
+
+                    <input
+                        class="form__input check-new-password"
+                        type="password"
+                        placeholder="Xác nhận mật khẩu mới"
+                    />
+                    <i  class="err-check-password d-none" style="color:red ; margin-left: -148px ">Password không được để trống</i>
+                    
+                    <!-- <a class="form__link">Forgot your password?</a> -->
+                    <button class="form__button button submit change-password">Đổi mật khẩu</button>
+                </form>
+            </div>
+            <div class="switch" id="switch-cnt">
+                <div class="switch__circle"></div>
+                <div class="switch__circle switch__circle--t"></div>
+                <div class="switch__container" id="switch-c1">
+                    <h2 class="switch__title title">Đổi mật khẩu</h2>
+                    <button class="switch__button button switch-btn">
+                        Đổi mật khẩu
+                    </button>
+                </div>
+                <div class="switch__container is-hidden" id="switch-c2">
+                    <h2 class="switch__title title">Sửa thông tin</h2>
+                    <button class="switch__button button switch-btn">
+                        Sửa thông tin
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <!-- <script src="https://kit.fontawesome.com/0c2db3ef80.js" crossorigin="anonymous"></script> -->
+        <script type="module" src="./js/change-user.js"></script>
+
+    </body>
+</html>

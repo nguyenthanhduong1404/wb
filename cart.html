@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Cart</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--===============================================================================================-->
+        <link rel="icon" type="image/png" href="images/icons/favicon.png" />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="vendor/bootstrap/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+        />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+        />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="fonts/themify/themify-icons.css"
+        />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css"
+        />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="fonts/elegant-font/html-css/style.css"
+        />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="vendor/animate/animate.css"
+        />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="vendor/css-hamburgers/hamburgers.min.css"
+        />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="vendor/animsition/css/animsition.min.css"
+        />
+        <!--===============================================================================================-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="vendor/select2/select2.min.css"
+        />
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="css/util.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <style>
+            .paypal-button {
+                background-color: #ffc439;
+            }
+            .paypal-button:hover {
+                opacity: 0.9;
+                transition: all 0.2s linear;
+            }
+        </style>
+        <!--===============================================================================================-->
+    </head>
+    <body class="animsition">
+        <!-- Header -->
+        <header class="header1">
+            <!-- Header desktop -->
+            <div class="container-menu-header">
+                <div class="topbar">
+                    <div class="topbar-social">
+                        <a
+                            href="#"
+                            class="topbar-social-item fa fa-facebook"
+                        ></a>
+                        <a
+                            href="#"
+                            class="topbar-social-item fa fa-instagram"
+                        ></a>
+                        <a
+                            href="#"
+                            class="topbar-social-item fa fa-pinterest-p"
+                        ></a>
+                        <a
+                            href="#"
+                            class="topbar-social-item fa fa-snapchat-ghost"
+                        ></a>
+                        <a
+                            href="#"
+                            class="topbar-social-item fa fa-youtube-play"
+                        ></a>
+                    </div>
+
+                    <span class="topbar-child1">
+                        Free shipping for standard order over $100
+                    </span>
+
+                    <div class="topbar-child2">
+                        <span class="topbar-email"> fashe@example.com </span>
+
+                        <div class="topbar-language rs1-select2">
+                            <select class="selection-1" name="time">
+                                <option>USD</option>
+                                <option>EUR</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrap_header">
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+                        <img src="images/icons/logo.png" alt="IMG-LOGO" />
+                    </a>
+
+                    <!-- Menu -->
+                    <div class="wrap_menu">
+                        <nav class="menu">
+                            <ul class="main_menu">
+                                <li>
+                                    <a href="index.html">Trang chủ</a>
+                                </li>
+
+                                <li>
+                                    <a href="product.html">Sản phẩm</a>
+                                </li>
+
+                                <li>
+                                    <a href="cart.html">Giỏ hàng</a>
+                                </li>
+
+                                <li>
+                                    <a href="about.html">Giới thiệu</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Header Icon -->
+                    <div class="header-icons">
+                        <div
+                            href="#"
+                            class="header-wrapicon1 dis-flex align-items-center pos-relative logIn-hover"
+                        >
+                            <img
+                                src="images/icons/icon-header-01.png"
+                                class="header-icon1"
+                                alt="ICON"
+                            />
+                            <div class="sub-list pos-absolute">
+                                <a href="login.html" class="logIn-link log-in"
+                                    >Đăng nhập</a
+                                >
+                                <a href="login.html" class="logIn-link register"
+                                    >Đăng Ký</a
+                                >
+                                <a href="" class="logIn-link log-out"
+                                    >Đăng xuất</a
+                                >
+                                <a
+                                    href="change-user.html"
+                                    class="logIn-link change-info"
+                                    >Đổi thông tin</a
+                                >
+                                <a
+                                    href="purchase-order.html"
+                                    class="logIn-link purchase-order"
+                                    >Đơn mua</a
+                                >
+                            </div>
+                        </div>
+                        <span class="user-name ml-2 font-weight-bold"></span>
+
+                        <span class="linedivide1"></span>
+
+                        <div class="header-wrapicon2 cart-logo">
+                            <img
+                                src="images/icons/icon-header-02.png"
+                                class="header-icon1 js-show-header-dropdown"
+                                alt="ICON"
+                            />
+                            <!-- Header cart noti -->
+                            <div class="header-cart header-dropdown">
+                                <ul class="header-cart-wrapitem"></ul>
+
+                                <div
+                                    class="header-cart-buttons mt-2 justify-content-end"
+                                >
+                                    <div class="header-cart-wrapbtn">
+                                        <!-- Button -->
+                                        <a
+                                            href="cart.html"
+                                            class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4"
+                                        >
+                                            View Cart
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Mobile -->
+            <div class="wrap_header_mobile">
+                <!-- Logo moblie -->
+                <a href="index.html" class="logo-mobile">
+                    <img src="images/icons/logo.png" alt="IMG-LOGO" />
+                </a>
+
+                <!-- Button show menu -->
+                <div class="btn-show-menu">
+                    <!-- Header Icon mobile -->
+                    <div class="header-icons-mobile">
+                        <a href="#" class="header-wrapicon1 dis-block">
+                            <img
+                                src="images/icons/icon-header-01.png"
+                                class="header-icon1"
+                                alt="ICON"
+                            />
+                        </a>
+
+                        <span class="linedivide2"></span>
+
+                        <div class="header-wrapicon2">
+                            <img
+                                src="images/icons/icon-header-02.png"
+                                class="header-icon1 js-show-header-dropdown"
+                                alt="ICON"
+                            />
+                            <span class="header-icons-noti">0</span>
+
+                            <!-- Header cart noti -->
+                            <div class="header-cart header-dropdown">
+                                <ul class="header-cart-wrapitem">
+                                    <li class="header-cart-item">
+                                        <div class="header-cart-item-img">
+                                            <img
+                                                src="images/item-cart-01.jpg"
+                                                alt="IMG"
+                                            />
+                                        </div>
+
+                                        <div class="header-cart-item-txt">
+                                            <a
+                                                href="#"
+                                                class="header-cart-item-name"
+                                            >
+                                                White Shirt With Pleat Detail
+                                                Back
+                                            </a>
+
+                                            <span class="header-cart-item-info">
+                                                1 x $19.00
+                                            </span>
+                                        </div>
+                                    </li>
+
+                                    <li class="header-cart-item">
+                                        <div class="header-cart-item-img">
+                                            <img
+                                                src="images/item-cart-02.jpg"
+                                                alt="IMG"
+                                            />
+                                        </div>
+
+                                        <div class="header-cart-item-txt">
+                                            <a
+                                                href="#"
+                                                class="header-cart-item-name"
+                                            >
+                                                Converse All Star Hi Black
+                                                Canvas
+                                            </a>
+
+                                            <span class="header-cart-item-info">
+                                                1 x $39.00
+                                            </span>
+                                        </div>
+                                    </li>
+
+                                    <li class="header-cart-item">
+                                        <div class="header-cart-item-img">
+                                            <img
+                                                src="images/item-cart-03.jpg"
+                                                alt="IMG"
+                                            />
+                                        </div>
+
+                                        <div class="header-cart-item-txt">
+                                            <a
+                                                href="#"
+                                                class="header-cart-item-name"
+                                            >
+                                                Nixon Porter Leather Watch In
+                                                Tan
+                                            </a>
+
+                                            <span class="header-cart-item-info">
+                                                1 x $17.00
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div class="header-cart-total">
+                                    Total: $75.00
+                                </div>
+
+                                <div class="header-cart-buttons">
+                                    <div class="header-cart-wrapbtn">
+                                        <!-- Button -->
+                                        <a
+                                            href="cart.html"
+                                            class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4"
+                                        >
+                                            View Cart
+                                        </a>
+                                    </div>
+
+                                    <div class="header-cart-wrapbtn">
+                                        <!-- Button -->
+                                        <a
+                                            href="#"
+                                            class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4"
+                                        >
+                                            Check Out
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="btn-show-menu-mobile hamburger hamburger--squeeze"
+                    >
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Mobile -->
+            <div class="wrap-side-menu">
+                <nav class="side-menu">
+                    <ul class="main-menu">
+                        <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+                            <span class="topbar-child1">
+                                Free shipping for standard order over $100
+                            </span>
+                        </li>
+
+                        <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+                            <div class="topbar-child2-mobile">
+                                <span class="topbar-email">
+                                    fashe@example.com
+                                </span>
+
+                                <div class="topbar-language rs1-select2">
+                                    <select class="selection-1" name="time">
+                                        <option>USD</option>
+                                        <option>EUR</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-topbar-mobile p-l-10">
+                            <div class="topbar-social-mobile">
+                                <a
+                                    href="#"
+                                    class="topbar-social-item fa fa-facebook"
+                                ></a>
+                                <a
+                                    href="#"
+                                    class="topbar-social-item fa fa-instagram"
+                                ></a>
+                                <a
+                                    href="#"
+                                    class="topbar-social-item fa fa-pinterest-p"
+                                ></a>
+                                <a
+                                    href="#"
+                                    class="topbar-social-item fa fa-snapchat-ghost"
+                                ></a>
+                                <a
+                                    href="#"
+                                    class="topbar-social-item fa fa-youtube-play"
+                                ></a>
+                            </div>
+                        </li>
+
+                        <li class="item-menu-mobile">
+                            <a href="index.html">Trang chủ</a>
+                            <ul class="sub-menu">
+                                <li><a href="index.html">Homepage V1</a></li>
+                                <li><a href="home-02.html">Homepage V2</a></li>
+                                <li><a href="home-03.html">Homepage V3</a></li>
+                            </ul>
+                            <i
+                                class="arrow-main-menu fa fa-angle-right"
+                                aria-hidden="true"
+                            ></i>
+                        </li>
+
+                        <li class="item-menu-mobile">
+                            <a href="product.html">Sản phẩm</a>
+                        </li>
+
+                        <li class="item-menu-mobile">
+                            <a href="cart.html">Giỏ hàng</a>
+                        </li>
+
+                        <li class="item-menu-mobile">
+                            <a href="about.html">Giới thiệu</a>
+                        </li>
+
+                        <li class="item-menu-mobile">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Title Page -->
+        <section
+            class="bg-title-page p-t-40 p-b-50 flex-col-c-m"
+            style="background-image: url(images/heading-pages-01.jpg)"
+        >
+            <h2 class="l-text2 t-center">Cart</h2>
+        </section>
+
+        <!-- Cart -->
+        <section class="cart bgwhite p-t-70 p-b-100">
+            <div class="container">
+                <!-- Cart item -->
+                <div class="container-table-cart pos-relative">
+                    <div class="wrap-table-shopping-cart bgwhite">
+                        <table class="table-shopping-cart">
+                            <tr class="table-head">
+                                <th class="column-1"></th>
+                                <th class="column-2">Sản phẩm</th>
+                                <th class="column-3">Giá</th>
+                                <th class="column-4 p-l-70">Số lượng</th>
+                                <th class="column-5">Tổng tiền</th>
+                            </tr>
+
+                            <tbody class="wrap-item"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div
+                    class="flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-r-60 p-lr-15-sm"
+                >
+                    <div
+                        class="size10 trans-0-4 m-t-10 m-b-10"
+                        style="margin-left: auto"
+                    >
+                        <!-- Button -->
+                        <button
+                            class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4 btn-Update-Cart"
+                        >
+                            Cập nhật
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Total -->
+                <div
+                    class="w-size18 p-l-40 p-r-40 p-t-15 p-b-38 m-t-15 m-r-0 m-l-auto p-lr-15-sm"
+                >
+                    <h5 class="m-text20 p-b-24">Giỏ hàng</h5>
+
+                    <!--  -->
+                    <div class="flex-w flex-sb bo10 p-t-5 p-b-20">
+                        <span class="s-text18 w-size19 w-full-sm">
+                            Địa chỉ:
+                        </span>
+
+                        <div class="w-size20 w-full-sm">
+                            <p
+                                class="s-text8 p-b-23 address font-weight-bold"
+                            ></p>
+                        </div>
+                    </div>
+
+                    <div class="flex-w flex-sb bo10 p-t-5 p-b-20">
+                        <span class="s-text18 w-size19 w-full-sm">
+                            Họ và tên:
+                        </span>
+
+                        <div class="w-size20 w-full-sm">
+                            <p
+                                class="s-text8 p-b-23 fullName font-weight-bold"
+                            ></p>
+                        </div>
+                    </div>
+
+                    <div class="flex-w flex-sb bo10 p-t-5 p-b-20">
+                        <span class="s-text18 w-size19 w-full-sm">
+                            Số điện thoại:
+                        </span>
+
+                        <div class="w-size20 w-full-sm">
+                            <p
+                                class="s-text8 p-b-23 phoneNumber font-weight-bold"
+                            ></p>
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <div class="flex-w flex-sb-m p-t-26 p-b-30">
+                        <span class="m-text22 w-size19 w-full-sm">
+                            Tổng tiền:
+                        </span>
+
+                        <span
+                            class="m-text21 w-size20 w-full-sm font-weight-bold total-price"
+                        >
+                        </span>
+                    </div>
+
+                    <div class="size15 trans-0-4">
+                        <!-- Button -->
+                        <button
+                            class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4 order-product"
+                        >
+                            Thanh Toán Trực Tiếp
+                        </button>
+                        <button
+                            class="flex-c-m mt-3 paypal-button sizefull bg1 bo-rad-23 s-text1 trans-0-4 "
+                        >
+                            <img
+                                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAxcHgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxMDEgMzIiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHhtbG5zPSJodHRwOiYjeDJGOyYjeDJGO3d3dy53My5vcmcmI3gyRjsyMDAwJiN4MkY7c3ZnIj48cGF0aCBmaWxsPSIjMDAzMDg3IiBkPSJNIDEyLjIzNyAyLjggTCA0LjQzNyAyLjggQyAzLjkzNyAyLjggMy40MzcgMy4yIDMuMzM3IDMuNyBMIDAuMjM3IDIzLjcgQyAwLjEzNyAyNC4xIDAuNDM3IDI0LjQgMC44MzcgMjQuNCBMIDQuNTM3IDI0LjQgQyA1LjAzNyAyNC40IDUuNTM3IDI0IDUuNjM3IDIzLjUgTCA2LjQzNyAxOC4xIEMgNi41MzcgMTcuNiA2LjkzNyAxNy4yIDcuNTM3IDE3LjIgTCAxMC4wMzcgMTcuMiBDIDE1LjEzNyAxNy4yIDE4LjEzNyAxNC43IDE4LjkzNyA5LjggQyAxOS4yMzcgNy43IDE4LjkzNyA2IDE3LjkzNyA0LjggQyAxNi44MzcgMy41IDE0LjgzNyAyLjggMTIuMjM3IDIuOCBaIE0gMTMuMTM3IDEwLjEgQyAxMi43MzcgMTIuOSAxMC41MzcgMTIuOSA4LjUzNyAxMi45IEwgNy4zMzcgMTIuOSBMIDguMTM3IDcuNyBDIDguMTM3IDcuNCA4LjQzNyA3LjIgOC43MzcgNy4yIEwgOS4yMzcgNy4yIEMgMTAuNjM3IDcuMiAxMS45MzcgNy4yIDEyLjYzNyA4IEMgMTMuMTM3IDguNCAxMy4zMzcgOS4xIDEzLjEzNyAxMC4xIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDAzMDg3IiBkPSJNIDM1LjQzNyAxMCBMIDMxLjczNyAxMCBDIDMxLjQzNyAxMCAzMS4xMzcgMTAuMiAzMS4xMzcgMTAuNSBMIDMwLjkzNyAxMS41IEwgMzAuNjM3IDExLjEgQyAyOS44MzcgOS45IDI4LjAzNyA5LjUgMjYuMjM3IDkuNSBDIDIyLjEzNyA5LjUgMTguNjM3IDEyLjYgMTcuOTM3IDE3IEMgMTcuNTM3IDE5LjIgMTguMDM3IDIxLjMgMTkuMzM3IDIyLjcgQyAyMC40MzcgMjQgMjIuMTM3IDI0LjYgMjQuMDM3IDI0LjYgQyAyNy4zMzcgMjQuNiAyOS4yMzcgMjIuNSAyOS4yMzcgMjIuNSBMIDI5LjAzNyAyMy41IEMgMjguOTM3IDIzLjkgMjkuMjM3IDI0LjMgMjkuNjM3IDI0LjMgTCAzMy4wMzcgMjQuMyBDIDMzLjUzNyAyNC4zIDM0LjAzNyAyMy45IDM0LjEzNyAyMy40IEwgMzYuMTM3IDEwLjYgQyAzNi4yMzcgMTAuNCAzNS44MzcgMTAgMzUuNDM3IDEwIFogTSAzMC4zMzcgMTcuMiBDIDI5LjkzNyAxOS4zIDI4LjMzNyAyMC44IDI2LjEzNyAyMC44IEMgMjUuMDM3IDIwLjggMjQuMjM3IDIwLjUgMjMuNjM3IDE5LjggQyAyMy4wMzcgMTkuMSAyMi44MzcgMTguMiAyMy4wMzcgMTcuMiBDIDIzLjMzNyAxNS4xIDI1LjEzNyAxMy42IDI3LjIzNyAxMy42IEMgMjguMzM3IDEzLjYgMjkuMTM3IDE0IDI5LjczNyAxNC42IEMgMzAuMjM3IDE1LjMgMzAuNDM3IDE2LjIgMzAuMzM3IDE3LjIgWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMDMwODciIGQ9Ik0gNTUuMzM3IDEwIEwgNTEuNjM3IDEwIEMgNTEuMjM3IDEwIDUwLjkzNyAxMC4yIDUwLjczNyAxMC41IEwgNDUuNTM3IDE4LjEgTCA0My4zMzcgMTAuOCBDIDQzLjIzNyAxMC4zIDQyLjczNyAxMCA0Mi4zMzcgMTAgTCAzOC42MzcgMTAgQyAzOC4yMzcgMTAgMzcuODM3IDEwLjQgMzguMDM3IDEwLjkgTCA0Mi4xMzcgMjMgTCAzOC4yMzcgMjguNCBDIDM3LjkzNyAyOC44IDM4LjIzNyAyOS40IDM4LjczNyAyOS40IEwgNDIuNDM3IDI5LjQgQyA0Mi44MzcgMjkuNCA0My4xMzcgMjkuMiA0My4zMzcgMjguOSBMIDU1LjgzNyAxMC45IEMgNTYuMTM3IDEwLjYgNTUuODM3IDEwIDU1LjMzNyAxMCBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA2Ny43MzcgMi44IEwgNTkuOTM3IDIuOCBDIDU5LjQzNyAyLjggNTguOTM3IDMuMiA1OC44MzcgMy43IEwgNTUuNzM3IDIzLjYgQyA1NS42MzcgMjQgNTUuOTM3IDI0LjMgNTYuMzM3IDI0LjMgTCA2MC4zMzcgMjQuMyBDIDYwLjczNyAyNC4zIDYxLjAzNyAyNCA2MS4wMzcgMjMuNyBMIDYxLjkzNyAxOCBDIDYyLjAzNyAxNy41IDYyLjQzNyAxNy4xIDYzLjAzNyAxNy4xIEwgNjUuNTM3IDE3LjEgQyA3MC42MzcgMTcuMSA3My42MzcgMTQuNiA3NC40MzcgOS43IEMgNzQuNzM3IDcuNiA3NC40MzcgNS45IDczLjQzNyA0LjcgQyA3Mi4yMzcgMy41IDcwLjMzNyAyLjggNjcuNzM3IDIuOCBaIE0gNjguNjM3IDEwLjEgQyA2OC4yMzcgMTIuOSA2Ni4wMzcgMTIuOSA2NC4wMzcgMTIuOSBMIDYyLjgzNyAxMi45IEwgNjMuNjM3IDcuNyBDIDYzLjYzNyA3LjQgNjMuOTM3IDcuMiA2NC4yMzcgNy4yIEwgNjQuNzM3IDcuMiBDIDY2LjEzNyA3LjIgNjcuNDM3IDcuMiA2OC4xMzcgOCBDIDY4LjYzNyA4LjQgNjguNzM3IDkuMSA2OC42MzcgMTAuMSBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA5MC45MzcgMTAgTCA4Ny4yMzcgMTAgQyA4Ni45MzcgMTAgODYuNjM3IDEwLjIgODYuNjM3IDEwLjUgTCA4Ni40MzcgMTEuNSBMIDg2LjEzNyAxMS4xIEMgODUuMzM3IDkuOSA4My41MzcgOS41IDgxLjczNyA5LjUgQyA3Ny42MzcgOS41IDc0LjEzNyAxMi42IDczLjQzNyAxNyBDIDczLjAzNyAxOS4yIDczLjUzNyAyMS4zIDc0LjgzNyAyMi43IEMgNzUuOTM3IDI0IDc3LjYzNyAyNC42IDc5LjUzNyAyNC42IEMgODIuODM3IDI0LjYgODQuNzM3IDIyLjUgODQuNzM3IDIyLjUgTCA4NC41MzcgMjMuNSBDIDg0LjQzNyAyMy45IDg0LjczNyAyNC4zIDg1LjEzNyAyNC4zIEwgODguNTM3IDI0LjMgQyA4OS4wMzcgMjQuMyA4OS41MzcgMjMuOSA4OS42MzcgMjMuNCBMIDkxLjYzNyAxMC42IEMgOTEuNjM3IDEwLjQgOTEuMzM3IDEwIDkwLjkzNyAxMCBaIE0gODUuNzM3IDE3LjIgQyA4NS4zMzcgMTkuMyA4My43MzcgMjAuOCA4MS41MzcgMjAuOCBDIDgwLjQzNyAyMC44IDc5LjYzNyAyMC41IDc5LjAzNyAxOS44IEMgNzguNDM3IDE5LjEgNzguMjM3IDE4LjIgNzguNDM3IDE3LjIgQyA3OC43MzcgMTUuMSA4MC41MzcgMTMuNiA4Mi42MzcgMTMuNiBDIDgzLjczNyAxMy42IDg0LjUzNyAxNCA4NS4xMzcgMTQuNiBDIDg1LjczNyAxNS4zIDg1LjkzNyAxNi4yIDg1LjczNyAxNy4yIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDA5Y2RlIiBkPSJNIDk1LjMzNyAzLjMgTCA5Mi4xMzcgMjMuNiBDIDkyLjAzNyAyNCA5Mi4zMzcgMjQuMyA5Mi43MzcgMjQuMyBMIDk1LjkzNyAyNC4zIEMgOTYuNDM3IDI0LjMgOTYuOTM3IDIzLjkgOTcuMDM3IDIzLjQgTCAxMDAuMjM3IDMuNSBDIDEwMC4zMzcgMy4xIDEwMC4wMzcgMi44IDk5LjYzNyAyLjggTCA5Ni4wMzcgMi44IEMgOTUuNjM3IDIuOCA5NS40MzcgMyA5NS4zMzcgMy4zIFoiPjwvcGF0aD48L3N2Zz4"
+                                alt=""
+                            />
+                        </button>
+                        <!-- <div id="paypal-button-container" class="mt-3"></div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
+            <div class="flex-w p-b-90">
+                <div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
+                    <h4 class="s-text12 p-b-30">GET IN TOUCH</h4>
+
+                    <div>
+                        <p class="s-text7 w-size27">
+                            Any questions? Let us know in store at 8th floor,
+                            379 Hudson St, New York, NY 10018 or call us on (+1)
+                            96 716 6879
+                        </p>
+
+                        <div class="flex-m p-t-30">
+                            <a
+                                href="#"
+                                class="fs-18 color1 p-r-20 fa fa-facebook"
+                            ></a>
+                            <a
+                                href="#"
+                                class="fs-18 color1 p-r-20 fa fa-instagram"
+                            ></a>
+                            <a
+                                href="#"
+                                class="fs-18 color1 p-r-20 fa fa-pinterest-p"
+                            ></a>
+                            <a
+                                href="#"
+                                class="fs-18 color1 p-r-20 fa fa-snapchat-ghost"
+                            ></a>
+                            <a
+                                href="#"
+                                class="fs-18 color1 p-r-20 fa fa-youtube-play"
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+                    <h4 class="s-text12 p-b-30">Categories</h4>
+
+                    <ul>
+                        <li class="p-b-9">
+                            <a href="#" class="s-text7"> Men </a>
+                        </li>
+
+                        <li class="p-b-9">
+                            <a href="#" class="s-text7"> Women </a>
+                        </li>
+
+                        <li class="p-b-9">
+                            <a href="#" class="s-text7"> Dresses </a>
+                        </li>
+
+                        <li class="p-b-9">
+                            <a href="#" class="s-text7"> Sunglasses </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+                    <h4 class="s-text12 p-b-30">Links</h4>
+
+                    <ul>
+                        <li class="p-b-9">
+                            <a href="#" class="s-text7"> Search </a>
+                        </li>
+
+                        <li class="p-b-9">
+                            <a href="#" class="s-text7"> About Us </a>
+                        </li>
+
+                        <li class="p-b-9">
+                            <a href="#" class="s-text7"> Contact Us </a>
+                        </li>
+
+                        <li class="p-b-9">
+                            <a href="#" class="s-text7"> Returns </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+                    <h4 class="s-text12 p-b-30">Help</h4>
+
+                    <ul>
+                        <li class="p-b-9">
+                            <a href="#" class="s-text7"> Track Order </a>
+                        </li>
+
+                        <li class="p-b-9">
+                            <a href="#" class="s-text7"> Returns </a>
+                        </li>
+
+                        <li class="p-b-9">
+                            <a href="#" class="s-text7"> Shipping </a>
+                        </li>
+
+                        <li class="p-b-9">
+                            <a href="#" class="s-text7"> FAQs </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-size8 p-t-30 p-l-15 p-r-15 respon3">
+                    <h4 class="s-text12 p-b-30">Newsletter</h4>
+
+                    <form>
+                        <div class="effect1 w-size9">
+                            <input
+                                class="s-text7 bg6 w-full p-b-5"
+                                type="text"
+                                name="email"
+                                placeholder="email@example.com"
+                            />
+                            <span class="effect1-line"></span>
+                        </div>
+
+                        <div class="w-size2 p-t-20">
+                            <!-- Button -->
+                            <button
+                                class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4"
+                            >
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="t-center p-l-15 p-r-15">
+                <a href="#">
+                    <img
+                        class="h-size2"
+                        src="images/icons/paypal.png"
+                        alt="IMG-PAYPAL"
+                    />
+                </a>
+
+                <a href="#">
+                    <img
+                        class="h-size2"
+                        src="images/icons/visa.png"
+                        alt="IMG-VISA"
+                    />
+                </a>
+
+                <a href="#">
+                    <img
+                        class="h-size2"
+                        src="images/icons/mastercard.png"
+                        alt="IMG-MASTERCARD"
+                    />
+                </a>
+
+                <a href="#">
+                    <img
+                        class="h-size2"
+                        src="images/icons/express.png"
+                        alt="IMG-EXPRESS"
+                    />
+                </a>
+
+                <a href="#">
+                    <img
+                        class="h-size2"
+                        src="images/icons/discover.png"
+                        alt="IMG-DISCOVER"
+                    />
+                </a>
+
+                <div class="t-center s-text8 p-t-20">
+                    Copyright © 2018 All rights reserved. | This template is
+                    made with
+                    <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                    <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to top -->
+        <div class="btn-back-to-top bg0-hov" id="myBtn">
+            <span class="symbol-btn-back-to-top">
+                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+            </span>
+        </div>
+
+        <!-- Container Selection -->
+        <div id="dropDownSelect1"></div>
+        <div id="dropDownSelect2"></div>
+
+        <!--===============================================================================================-->
+        <script
+            type="text/javascript"
+            src="vendor/jquery/jquery-3.2.1.min.js"
+        ></script>
+        <!--===============================================================================================-->
+        <script
+            type="text/javascript"
+            src="vendor/animsition/js/animsition.min.js"
+        ></script>
+        <!--===============================================================================================-->
+        <script
+            type="text/javascript"
+            src="vendor/bootstrap/js/popper.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="vendor/bootstrap/js/bootstrap.min.js"
+        ></script>
+        <!--===============================================================================================-->
+        <script
+            type="text/javascript"
+            src="vendor/select2/select2.min.js"
+        ></script>
+        <script type="text/javascript">
+            $(".selection-1").select2({
+                minimumResultsForSearch: 20,
+                dropdownParent: $("#dropDownSelect1"),
+            });
+
+            $(".selection-2").select2({
+                minimumResultsForSearch: 20,
+                dropdownParent: $("#dropDownSelect2"),
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/toastify-js"
+        ></script>
+        <!--===============================================================================================-->
+        <script src="js/main.js"></script>
+
+        <script src="./common/handleRenderUsername.js"></script>
+        <script type="module" src="./common/handleRenderCart.js"></script>
+        <script type="module" src="./js/cart.js"></script>
+        <script
+            async
+            src="https://www.paypal.com/sdk/js?client-id=AaiOR0UuKrkTaDWKtlae81PRr3enX2RBcxrcpX39uHH2VJy1ntxfIu3LuU8wOgey8oHm4SzH3cwqM5N5&components=buttons"
+        ></script>
+        <!-- <script>
+            // wait for on load event to ensure the JS SDK is loaded
+            window.addEventListener('load', (event) => {
+
+                const handleCreateBill = async () => {
+                            
+                            
+                        };
+              var options = {
+                createOrder: async function(data, actions) {
+                    const date = getDate();
+                            const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+                            const product_price_El = document.querySelectorAll(".product-price");
+                            const input_quantity_El = document.querySelectorAll(".num-product");
+                            const bill = {
+                                idUser: userInfo.idUser,
+                                dateBill: date,
+                                status: 0,
+                            };
+                            if(product_price_El.length ===0 || input_quantity_El.length ===0) {
+                                Toast('không có đơn hàng nào ')
+                                return
+                            }
+                            const resultBill = await billApi.createBill(bill);
+                            if (resultBill) {
+                            
+                                product_price_El.forEach(async(item, index) => {
+                                    const idBill = resultBill.data; 
+                                    const idProduct = item.getAttribute('data-id')
+                                    const quantity = +input_quantity_El[index].value
+                                    const price = quantity * item.getAttribute('data-price')
+                                    const billDetail = {
+                                        idBill,
+                                        idProduct,
+                                        quantity,
+                                        price,
+                                    };
+                                    await billApi.createBillDetail(billDetail)
+
+                                    const allPr= document.querySelector(".num-product");
+                                    let PrQuan = parseInt(allPr.getAttribute('quantity'));
+                                    
+                                    // sua so luong
+                                    const valueImportProduct = {
+                                    idProduct,
+                                    quantityImport :PrQuan - quantity, 
+                                    };
+                                    const changeQuantityPr = await productsAPI.modifiProduct(valueImportProduct);
+                                });
+                                await cartsAPI.deleteCartByUserID(userInfo.idUser)
+                                Toast("Bạn đã đặt hàng thành công", "success");
+                                setTimeout(() => {
+                                    window.location.href = "purchase-order.html";
+                                },1500) 
+                            }
+                  // This function sets up the details of the transaction, including the amount and line item details. 
+                  return actions.order.create({
+                    purchase_units: [{
+                      amount: {
+                        value: price*quantity
+                      }
+                    }]
+                  });
+                },
+                onApprove: function(data, actions) {
+                  // This function captures the funds from the transaction. 
+                  return actions.order.capture().then(function(details) {
+                    // This function shows a transaction success message to your buyer. 
+                    alert('Transaction completed by ' + details.payer.name.given_name);
+                  })
+                }
+              };
+              // This function displays Smart Payment Buttons on your web page. 
+              window.paypal.Buttons(options).render('#paypal-button-container');
+            });
+          </script> -->
+    </body>
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin</title>
+
+    <link href="./plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
+    <!-- Chartist -->
+    <link rel="stylesheet" href="./plugins/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
+    <!-- Custom Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .page-title{
+            padding: 20px 20px;
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index.html">
+                    <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
+                    <span class="logo-compact"><img src="./images/logo-compact.png" alt=""></span>
+                    <span class="brand-title">
+                        <img src="images/logo-text.png" alt="">
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content clearfix">
+
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="toggle-icon"><i class="icon-menu"></i></span>
+                    </div>
+                </div>
+            
+                <div class="header-right">
+                    <ul class="clearfix">
+                      
+                        <li class="icons dropdown d-none d-md-flex">
+                            <a href="javascript:void(0)" class="log-user" data-toggle="dropdown">
+                                <span class="user-name">homaique</span> <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
+                            </a>
+                          
+                        </li>
+                        <li class="icons dropdown">
+                            <div class="user-img c-pointer position-relative" data-toggle="dropdown">
+                                <span class="activity active"></span>
+                                <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+
+                            </div>
+                            <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li><a href="index.html" class="log-out"> Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="nk-sidebar">
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <!-- <li>
+                <a  href="javascript:void()" aria-expanded="false">
+                     <span class="nav-text">Menu</span>
+                </a>
+              
+            </li> -->
+                    <li>
+                        <a href="statistical.html" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i>
+                            <span class="nav-text">Thống kê</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin.html" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i>
+                            <span class="nav-text">Biểu đồ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-customer.html" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i>
+                            <span class="nav-text">Quản lý tài khoản</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-bill.html" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i>
+                            <span class="nav-text">Quản lý đơn hàng</span>
+                        </a>
+                    </li>
+                      
+                      <li>
+                        <a href="adminProduct.html" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i>
+                            <span class="nav-text">Quản lý sản phẩm</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="admin-brand.html" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i>
+                            <span class="nav-text">Quản lý thương hiệu</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <h3 class="page-title"> Biểu đồ</h3>
+            <div class="container-fluid mt-3">
+
+                <div class="row">
+                    <div class="col-lg-1 col-sm-6">
+
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        
+                        <select class="form-control selectedY">
+                            
+                            <option></option>
+                            
+                            
+                            
+                        </select>
+
+                    </div>
+                    <div class="col-lg-1 col-sm-6">
+
+                    </div>
+                    
+                    <div class="col-lg-1 col-sm-6">
+
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-2">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Tổng tiền thu được</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white total-money">0</h2>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Thống kê theo tháng</h4>
+                                <div id="morris-bar-chart"
+                                    style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                    <svg height="342" version="1.1" width="1158.3" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        style="overflow: hidden; position: relative; left: -0.95px; top: -0.225px;">
+                                        <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with
+                                            Raphaël 2.2.0</desc>
+                                        <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text
+                                            x="32.52499961853027" y="303.3999996185303" text-anchor="end"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal">
+                                            <tspan dy="4.39998722076416"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan>
+                                        </text>
+                                        <path fill="none" stroke="#000000"
+                                            d="M45.02499961853027,303.3999996185303H1133.3" stroke-opacity="0"
+                                            stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                        </path><text x="32.52499961853027" y="233.7999997138977" text-anchor="end"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal">
+                                            <tspan dy="4.399993419647217"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">50000</tspan>
+                                        </text>
+                                        <path fill="none" stroke="#000000"
+                                            d="M45.02499961853027,233.7999997138977H1133.3" stroke-opacity="0"
+                                            stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                        </path><text x="37.52499961853027" y="164.19999980926514" text-anchor="end"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal">
+                                            <tspan dy="4.399999618530273"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100000</tspan>
+                                        </text>
+                                        <path fill="none" stroke="#000000"
+                                            d="M45.02499961853027,164.19999980926514H1133.3" stroke-opacity="0"
+                                            stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                        </path><text x="38.52499961853027" y="94.59999990463257" text-anchor="end"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal">
+                                            <tspan dy="4.399998188018799"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">150000</tspan>
+                                        </text>
+                                        <path fill="none" stroke="#000000"
+                                            d="M45.02499961853027,94.59999990463257H1133.3" stroke-opacity="0"
+                                            stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                        </path><text x="38.52499961853027" y="25" text-anchor="end"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal">
+                                            <tspan dy="4.399999618530273"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">200000</tspan>
+                                        </text>
+                                        <path fill="none" stroke="#000000" d="M45.02499961853027,25H1133.3"
+                                            stroke-opacity="0" stroke-width="0.5"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text
+                                        
+                                            x="900.0982142039708" y="315.8999996185303" text-anchor="middle"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal" transform="matrix(1,0,0,1,0,6.8)">
+                                            <tspan dy="4.39998722076416"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">12</tspan>
+                                        </text><text x="865.0982142039708" y="315.8999996185303" text-anchor="middle"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal" transform="matrix(1,0,0,1,0,6.8)">
+                                            <tspan dy="4.39998722076416"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">11</tspan>
+                                        </text><text x="744.6303570066178" y="315.8999996185303" text-anchor="middle"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal" transform="matrix(1,0,0,1,0,6.8)">
+                                            <tspan dy="4.39998722076416"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">10</tspan>
+                                        </text>
+                                        <text x="710.6303570066178" y="315.8999996185303" text-anchor="middle"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal" transform="matrix(1,0,0,1,0,6.8)">
+                                            <tspan dy="4.39998722076416"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">9</tspan>
+                                        </text>
+                                        <text x="589.1624998092651" y="315.8999996185303" text-anchor="middle"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal" transform="matrix(1,0,0,1,0,6.8)">
+                                            <tspan dy="4.39998722076416"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">8</tspan>
+                                        </text>
+                                        <text x="554.1624998092651" y="315.8999996185303" text-anchor="middle"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal" transform="matrix(1,0,0,1,0,6.8)">
+                                            <tspan dy="4.39998722076416"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">7</tspan>
+                                        </text>
+                                        <text x="433.69464261191234" y="315.8999996185303" text-anchor="middle"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal" transform="matrix(1,0,0,1,0,6.8)">
+                                            <tspan dy="4.39998722076416"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">6</tspan>
+                                        </text>
+                                        <text x="397.69464261191234" y="315.8999996185303" text-anchor="middle"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal" transform="matrix(1,0,0,1,0,6.8)">
+                                            <tspan dy="4.39998722076416"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">5</tspan>
+                                        </text>
+                                        <text x="278.22678541455946" y="315.8999996185303" text-anchor="middle"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal" transform="matrix(1,0,0,1,0,6.8)">
+                                            <tspan dy="4.39998722076416"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">4</tspan>
+                                        </text>
+                                        <text  x="243.22678541455946" y="315.8999996185303" text-anchor="middle"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal" transform="matrix(1,0,0,1,0,6.8)">
+                                            <tspan dy="4.39998722076416"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">3</tspan>
+                                        </text>
+                                        <text  x="122.75892821720667" y="315.8999996185303" text-anchor="middle"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal" transform="matrix(1,0,0,1,0,6.8)">
+                                            <tspan dy="4.39998722076416"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2</tspan>
+                                        </text>
+                                        <text  x="82.75892821720667" y="315.8999996185303" text-anchor="middle"
+                                            font-family="sans-serif" font-size="12px" stroke="none" fill="#888888"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;"
+                                            font-weight="normal" transform="matrix(1,0,0,1,0,6.8)">
+                                            <tspan dy="4.39998722076416"
+                                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1</tspan>
+                                        </text>
+                                        <rect class="month1" x="64.45848176819938" y="303" width="36.8669642993382"
+                                            height="0" rx="0" ry="0" fill="#7571f9" stroke="none"
+                                            fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect>
+                                        <rect class="month2" x="104.32544606753757" y="303" width="36.8669642993382"
+                                            height="0" rx="0" ry="0" fill="#7571f9" stroke="none"
+                                            fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect>
+                                        <rect class="month3" x="219.9263389655522" y="303" width="36.8669642993382"
+                                            height="0" rx="0" ry="0" fill="#7571f9" stroke="none"
+                                            fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect>
+                                        <rect class="month4" x="259.79330326489037" y="303"
+                                            width="36.8669642993382" height="0" rx="0" ry="0"
+                                            fill="#7571f9" stroke="none" fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect>
+                                        <rect class="month5" x="375.39419616290496" y="303" width="36.8669642993382"
+                                            height="0" rx="0" ry="0" fill="#7571f9" stroke="none"
+                                            fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect>
+                                        <rect class="month6" x="415.26116046224314" y="303" width="36.8669642993382"
+                                            height="0" rx="0" ry="0" fill="#7571f9" stroke="none"
+                                            fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect>
+                                        <rect class="month7" x="530.8620533602577" y="303" width="36.8669642993382"
+                                            height="0" rx="0" ry="0" fill="#7571f9" stroke="none"
+                                            fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect>
+                                        <rect class="month8" x="570.7290176595959" y="303" width="36.8669642993382"
+                                            height="0" rx="0" ry="0" fill="#7571f9" stroke="none"
+                                            fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect>
+                                        <rect class="month9" x="686.3299105576106" y="303" width="36.8669642993382"
+                                            height="0" rx="0" ry="0" fill="#7571f9" stroke="none"
+                                            fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect>
+                                        <rect class="month10" x="726.1968748569487" y="303" width="36.8669642993382"
+                                            height="0" rx="0" ry="0" fill="#7571f9" stroke="none"
+                                            fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect>
+                                        <rect class="month11" x="841.7977677549634" y="303" width="36.8669642993382"
+                                            height="0" rx="0" ry="0" fill="#7571f9" stroke="none"
+                                            fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect>
+                                        <rect class="month12" x="881.6647320543016" y="303" width="36.8669642993382"
+                                            height="0" rx="0" ry="0" fill="#7571f9" stroke="none"
+                                            fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect>
+                                        <!-- <rect x="997.2656249523161" y="25" width="36.8669642993382"
+                                            height="278.3999996185303" rx="0" ry="0" fill="#fc6c8e" stroke="none"
+                                            fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect> -->
+                                        <!-- <rect x="1037.1325892516543" y="52.83999996185301" width="36.8669642993382"
+                                            height="250.55999965667726" rx="0" ry="0" fill="#7571f9" stroke="none"
+                                            fill-opacity="1"
+                                            style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;">
+                                        </rect> -->
+                                    </svg>
+                                    <div class="morris-hover morris-default-style hover-price"
+                                        style="left: 77.9714px; top: 117px; display: none;">
+                                        <div class="morris-hover-row-label">1</div>
+                                        <div class="morris-hover-point" style="color: #FC6C8E">
+                                            100
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+
+    <!-- Chartjs -->
+    <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
+    <!-- Circle progress -->
+    <script src="./plugins/circle-progress/circle-progress.min.js"></script>
+    <!-- Datamap -->
+    <script src="./plugins/d3v3/index.js"></script>
+    <script src="./plugins/topojson/topojson.min.js"></script>
+    <script src="./plugins/datamaps/datamaps.world.min.js"></script>
+    <!-- Morrisjs -->
+    <script src="./plugins/raphael/raphael.min.js"></script>
+    <script src="./plugins/morris/morris.min.js"></script>
+    <!-- Pignose Calender -->
+    <script src="./plugins/moment/moment.min.js"></script>
+    <script src="./plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <!-- ChartistJS -->
+    <script src="./plugins/chartist/js/chartist.min.js"></script>
+    <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+
+    <script type="module" src="js/admin.js"></script>
+    <script type="module" src="./common/handleRenderUsername.js"></script>
+
+    <!-- <script src="./js/dashboard/dashboard-1.js"></script> -->
+
+</body>
+
+</html>
